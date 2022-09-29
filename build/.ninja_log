@@ -1,0 +1,4 @@
+# ninja log v5
+1	85	1664471618635416150	CMakeFiles/NeatString.dir/src/NeatString.c.o	33b37b8df6bc7d7b
+1	884	1664471628817723000	libNeatString.a	ebe9fe42e6aaba8c
+1	76	1664471881384036483	test/CMakeFiles/nsTest.dir/nsTest.c.o	a4c69a4437dbbcb9

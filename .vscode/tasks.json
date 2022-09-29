@@ -8,7 +8,6 @@
       "args": [
         "-fdiagnostics-color=always",
         "-g",
-        //"${file}",
         "${workspaceFolder}/*.c",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
@@ -22,6 +21,22 @@
         "isDefault": true
       },
       "detail": "compiler: /usr/bin/gcc"
+    },
+    {
+      "type": "cmake",
+      "label": "CMake: build",
+      "command": "build",
+      "targets": ["all"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "CMake template build task"
+    },
+    {
+      "type": "cmake",
+      "label": "CMake: install",
+      "command": "install",
+      "problemMatcher": [],
+      "detail": "CMake template install task"
     }
   ]
 }

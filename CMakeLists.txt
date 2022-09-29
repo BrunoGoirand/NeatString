@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(NeatString VERSION 1.0.0)
+project(NeatString_Project VERSION 1.0.0)
 
-add_library(NeatString
-NeatString.c)
+add_subdirectory(NeatString)
 
-message(${CMAKE_INSTALL_PREFIX})
+add_executable(nsTest
+nsTest.c)
+
+target_link_libraries(nsTest NeatString)

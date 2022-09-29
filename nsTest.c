@@ -8,7 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "NeatString.h"
+#include "../include/NeatString.h"
 
 
 /*
