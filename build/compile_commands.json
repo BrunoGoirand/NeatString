@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/goirand/Personal/Dev/Library/NeatString/build",
+  "command": "/usr/bin/clang -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/NeatString.dir/NeatString.c.o -c /Users/goirand/Personal/Dev/Library/NeatString/NeatString.c",
+  "file": "/Users/goirand/Personal/Dev/Library/NeatString/NeatString.c"
+}
+]
