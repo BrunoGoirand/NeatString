@@ -41,23 +41,27 @@ int main(int argc, char **argv) {
 
 	char *result;
 	result = ltrim(argv[1]);
-	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
+	fprintf(stdout, "left[%s](%lu)\n", result, strlen(result));
 	free(result);
 
 	result = rtrim(argv[1]);
-	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
+	fprintf(stdout, "right[%s](%lu)\n", result, strlen(result));
 	free(result);
 
 	result = trim(argv[1]);
-	fprintf(stdout, "[%s](%lu)(%d)\n", result, strlen(result), charHap(result, ' '));
+	fprintf(stdout, "trim[%s](%lu)(%d)\n", result, strlen(result), charHap(result, ' '));
 	free(result);
 
 	result = itrim(argv[1]);
-	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
+	fprintf(stdout, "inside[%s](%lu)\n", result, strlen(result));
 	free(result);
 
+	int position;
+	position = stringHap(argv[1], "//");
+	fprintf(stdout, "stringHap[%s](%d)\n", argv[1], position);
+
 	result = removeCPPComments(argv[1]);
-	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
+	fprintf(stdout, "remove[%s](%lu)\n", result, strlen(result));
 	free(result);
 
 	return(EXIT_SUCCESS);
