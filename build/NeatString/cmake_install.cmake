@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -61,7 +61,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "/usr/local/lib/NeatString" TYPE STATIC_LIBRARY FILES "/Users/goirand/Personal/Dev/Library/NeatString/build/NeatString/libNeatString.a")
   if(EXISTS "$ENV{DESTDIR}/usr/local/lib/NeatString/libNeatString.a" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/NeatString/libNeatString.a")
-    execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/ranlib" "$ENV{DESTDIR}/usr/local/lib/NeatString/libNeatString.a")
+    execute_process(COMMAND "/usr/bin/ranlib" "$ENV{DESTDIR}/usr/local/lib/NeatString/libNeatString.a")
   endif()
 endif()
 
@@ -91,16 +91,16 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local/lib/NeatString" TYPE FILE FILES "/Users/goirand/Personal/Dev/Library/NeatString/build/NeatString/CMakeFiles/Export/777730b4107240a315bb0a3dbd266d5d/NeatString-config.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/usr/local/lib/NeatString/NeatString-config-noconfig.cmake")
+     "/usr/local/lib/NeatString/NeatString-config-debug.cmake")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-    file(INSTALL DESTINATION "/usr/local/lib/NeatString" TYPE FILE FILES "/Users/goirand/Personal/Dev/Library/NeatString/build/NeatString/CMakeFiles/Export/777730b4107240a315bb0a3dbd266d5d/NeatString-config-noconfig.cmake")
+    file(INSTALL DESTINATION "/usr/local/lib/NeatString" TYPE FILE FILES "/Users/goirand/Personal/Dev/Library/NeatString/build/NeatString/CMakeFiles/Export/777730b4107240a315bb0a3dbd266d5d/NeatString-config-debug.cmake")
   endif()
 endif()
 

@@ -8,7 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../include/NeatString.h"
+#include "NeatString.h"
 
 
 /*
@@ -42,14 +42,21 @@ int main(int argc, char **argv) {
 	char *result;
 	result = ltrim(argv[1]);
 	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
+	free(result);
 
 	result = rtrim(argv[1]);
 	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
+	free(result);
 
-	result = ltrim(result);
+	result = trim(argv[1]);
 	fprintf(stdout, "[%s](%lu)(%d)\n", result, strlen(result), charHap(result, ' '));
+	free(result);
 
 	result = itrim(argv[1]);
+	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
+	free(result);
+
+	result = removeCPPComments(argv[1]);
 	fprintf(stdout, "[%s](%lu)\n", result, strlen(result));
 	free(result);
 
