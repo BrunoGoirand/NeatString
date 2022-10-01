@@ -1,7 +1,0 @@
-# ninja log v5
-205	315	1664603915482236276	nsTest	41fc987855e758e
-1	65	0	CMakeFiles/install.util	4ce36740c8fd1bd8
-115	205	1664603915375783000	NeatString/libNeatString.a	43fa3c486fc6900d
-1	884	1664471628817723000	libNeatString.a	ebe9fe42e6aaba8c
-2	115	1664603915281071121	NeatString/CMakeFiles/NeatString.dir/src/NeatString.c.o	d5bfc1f08dd80630
-2	87	1664539332316215923	CMakeFiles/nsTest.dir/nsTest.c.o	81ec1ca1f8d64fea

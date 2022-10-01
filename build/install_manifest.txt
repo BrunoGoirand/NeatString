@@ -1,4 +1,0 @@
-/usr/local/include/NeatString/NeatString.h
-/usr/local/lib/NeatString/libNeatString.a
-/usr/local/lib/NeatString/NeatString-config.cmake
-/usr/local/lib/NeatString/NeatString-config-debug.cmake
